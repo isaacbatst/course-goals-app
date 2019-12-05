@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={{ padding: 40 }}>
+    <View style={styles.container}>
       <View style={styles.firstBox}>
         <Text>1</Text>
       </View>
@@ -18,24 +18,29 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    padding: 40,
+    flexDirection: "row",
+    width: "80%",
+    height: 300,
+    backgroundColor: "black",
+    justifyContent: 'space-around',
+    alignItems: 'stretch'
+  },
   firstBox: {
+    flex: 2,
     backgroundColor: "red",
-    width: 100,
-    height: 100,
     justifyContent: "center",
     alignItems: "center"
   },
   secondBox: {
+    flex: 1,
     backgroundColor: "blue",
-    width: 100,
-    height: 100,
     justifyContent: "center",
     alignItems: "center"
   },
   thirdBox: {
     backgroundColor: "green",
-    width: 100,
-    height: 100,
     justifyContent: "center",
     alignItems: "center"
   }
